@@ -1,0 +1,24 @@
+# docker 的网络方案
+
+- 桥接模式
+  - --network=bridge
+  - docker 为新容器分配独立的网络名称空间
+  - 创建 veth pair，一端接入容器，一端接入 docker0 网桥
+  - 接入同一个网桥内的容器直接依靠二级网络来通信，其它范围之外的就需要走网关
+- 主机模式
+  - --network=host
+  - 容器使用宿主机上的真实设施，不会有自己独立的 ip 地址
+- 空置模式
+  - --network=none
+  - docker 会给新容器创建独立的网络名称空间，但不会创建任何虚拟的网络设备
+  - 为了方便用户自定义配置
+- 容器模式
+  - --network=container:容器名
+  - 新创建的容器会加入指定的容器的网络名称空间，共享一切的网络资源，除文件、PID 等
+- MACVLAN 模式
+  - docker network create -d macvlan
+  - 此网络允许为容器指定一个副本网卡，容器通过副本网卡的 MAC 地址来使用宿主机上的网络设备
+  - 用于在追求通信性能的场合
+- Overlay 模式
+  - docker network create -d overlay
+  - 很少使用，主要用于 Docker Swarm 服务之间进行通信
