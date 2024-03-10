@@ -53,11 +53,11 @@ Router 决定 Listener 在接收到下游的数据后，具体应该将数据交
 
 ```mermaid
 graph BT
-    A[上游]
-    B[Envoy-Listener]
+    A[下游数据]
+    B[Listener]
     C[Route]
     D[Cluster]
-    E[下游数据]
+    E[上游]
     
     subgraph envoy 
         B
