@@ -1,0 +1,13 @@
+# pwgen
+
+生成随机密码的工具
+
+```shell
+➜  ~ pwgen 32
+ShaijaiCoow5quieShaavoo8og6Ahs4b ohqu8ieb3ioR5ahmiecohp8daefohpha
+phahW2da7ingoo3Cor3Ait2yohr0quee zighoo3eeshaij1eiC5Thaech3aR0Omo
+oquuumaeshogaaJ9ha7aedoodooqu6ch sheow9iezohf7emiGhec9iequoLaoXai
+ahca4ma0teepeel7leizah5ieh2Oogha Nie9pi4ejux4phieghueghuud7Eic8wa
+ahPoo7iewuceizeeseya1wied4ahshie eirah8EeZ2Ueroo3yeeseilo7aeg0ieX
+ohTahg0ooquah6Aepi8ui5ohhee6hai1 Ingo3ahsohf6kie7peidahna2eu8aiva
+```
